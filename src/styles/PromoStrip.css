@@ -1,0 +1,36 @@
+:root {
+  --blue: #0B6CFB;
+  --red: #E63946;
+  --ink: #0f172a;
+  --soft: #f5f7fb;
+}
+
+.promostrip {
+  overflow: hidden;
+  background: var(--blue);   /* fond bleu */
+  border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
+}
+
+.promostrip-track {
+  display: flex;
+  width: max-content;
+  animation: scroll-left 20s linear infinite;
+}
+
+.promostrip-content {
+  display: flex;
+}
+
+.ps-item {
+  display: inline-block;
+  margin: 0 40px;
+  font-weight: 600;
+  color: #fff;          /* texte blanc */
+  font-size: 14px;
+}
+/* Animation défilement gauche → droite */
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
